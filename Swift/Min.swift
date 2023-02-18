@@ -5,7 +5,7 @@ var 🐱‍👤, 🙀, 🤠: Int
 //🐱‍👤 segundos
 print("Introduzca los Segundos: ")
 🐱‍👤 = Int(readLine()!) ?? 0
-🙀 = 🐱‍👤/3600
+🙀 = 🐱‍👤/3600//modificacion random
 🤠 = 🐱‍👤/60
 print("Cantidad de horas: \(🙀)")
 print("Cantidad de minutos: \(🤠)")
