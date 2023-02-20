@@ -25,7 +25,11 @@ public class Libreria {
         System.out.println("10.-Area del rectangulo");
     }
     public static void mostrarMenuFis(){
-        System.out.println("1.-Velocidad");
+        System.out.println("1.-Energia potencial Gravitatoria");
+        System.out.println("2.-Calcular Distancia");
+        System.out.println("3.-Ley de Ohms");
+        System.out.println("4.-Modulo de corte");
+        System.out.println("5.-Presion Hidrostática");
     }
 
     public static void areaTriangulo(){
@@ -99,14 +103,65 @@ public class Libreria {
         h = sc.nextInt();
         System.out.println("El area del rectangulo es: " + b*h);
     }
-    public static void Vel(){
-        int T,D,V;
-        System.out.println("Ingrese la distancia: ");
-        D = sc.nextInt();
-        System.out.println("Ingrese el tiempo: ");
-        T = sc.nextInt();
-        V=D/T;
-        System.out.println("La velocidad es : " + V);
+    //EPG = Energia potencial gravitatoria
+    public static void ePG(){
+        int masa, gravedad, altura, Epg;
+        System.out.println("Ingrese la Masa");
+        masa = sc.nextInt();
+        System.out.println("Ingrese la gravedad");
+        gravedad = sc.nextInt();
+        System.out.println("Ingrese la altura ");
+        altura = sc.nextInt();
+        Epg = (masa) * (gravedad) * (altura);
+        System.out.println("Energia potencial gravitatoria: " + Epg);
+
     }
+    public static void Distancia(){
+        double velocidad, tiempo, aceleracion,distancia;
+        System.out.println("Ingresa la velocidad");
+        velocidad = sc.nextDouble();
+        System.out.println("Ingresa el tiempo ");
+        tiempo = sc.nextDouble();
+        System.out.println("Ingresa la aceleracion");
+        aceleracion = sc.nextDouble();
+        distancia = (velocidad *tiempo) + (aceleracion *tiempo * tiempo /2);
+        System.out.println("La distancia es de : " + distancia);
+
+    }
+    public static void Ohms(){
+        double resistencia, icorriente,diferenciaP;
+        System.out.println("Ingrese la diferencia: ");
+        diferenciaP = sc.nextDouble();
+        System.out.println("Ingrese el valor de la resistencia: ");
+        resistencia = sc.nextDouble();
+        (icorriente) = (diferenciaP) / (resistencia);
+        System.out.println("Ley de Ohms: " + icorriente);
+    }
+    //Modulo de corte || Módulo de cizalladura
+    public static void mCorte(){
+        double fuerzaT, longitud,variaciondeL,area,modulo;
+        System.out.println("Ingrese la Fuerza: ");
+        fuerzaT = sc.nextDouble();
+        System.out.println("Ingrese la longitud");
+        longitud = sc.nextDouble();
+        System.out.println("Ingrese la variacion del lado ");
+        variaciondeL = sc.nextDouble();
+        System.out.println("Ingrese el area");
+        area = sc.nextDouble();
+        modulo = (fuerzaT) * (longitud)/(variaciondeL)*(area);
+        System.out.println("El modulo de corte es: " + modulo);
+    }
+    public static void pHidro(){
+        float densidad,gravedad,altura,Ph;
+        System.out.println("Ingrese la densidad");
+        densidad = sc.nextFloat();
+        System.out.println("Ingrese la gravedad");
+        gravedad = sc.nextFloat();
+        System.out.println("Ingrese la altura: ");
+        altura = sc.nextFloat();
+        Ph=(densidad)*(gravedad)*(altura);
+        System.out.println("La presion Hidrostática es: " + Ph);
+    }
+
 }
 

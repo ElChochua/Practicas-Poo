@@ -5,7 +5,7 @@ public class PruebasLibrerias2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opc;
-        System.out.println("1.-Figuras Geometricas\n2.-Formulas fisicas");
+        System.out.println("1.-Figuras Geometricas\n2.-Formulas fisicas/Electricas");
         opc = sc.nextInt();
         switch(opc){
             case 1:
@@ -31,7 +31,11 @@ public class PruebasLibrerias2 {
                 System.out.println("Seleccione una opcion: ");
                 opc=sc.nextInt();
                 switch(opc){
-                    case 1 -> Libreria.Vel();
+                    case 1 -> Libreria.ePG();
+                    case 2 -> Libreria.Distancia();
+                    case 3 -> Libreria.Ohms();
+                    case 4 -> Libreria.mCorte();
+                    case 5 -> Libreria.pHidro();
                     default -> System.out.println("Ingrese una opcion valida");
                 }
                 break;
