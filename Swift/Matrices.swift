@@ -1,26 +1,27 @@
 import Swift
-var Matriz = [[Int]]( repeating: [Int]( repeating: 0, count: 3 ), count: 3 )
-var num,mayor,posicioni,posicionj:Int
-mayor = 0
-posicioni = 0
-posicionj = 0
-for i in 0..<3 {
-    for j in 0..<3{
-        print("Introduce un numero en la posicion [\(i)][\(j)]: ")
-        num = Int(readLine()!) ?? 0
-        Matriz[i][j] = num
-        if num > mayor{
-            mayor = num
-            posicioni = i
-            posicionj = j
+//Num:😗😗 Mayor:🤩🤩 Posicioni:👉👉 Posicionj:👈👈 i:🙌🙌 j:🙏🙏 Matriz:🏢
+var 🏢 = [[Int]]( repeating: [Int]( repeating: 0, count: 3 ), count: 3 )
+var 😗😗,🤩🤩,👈👈,👉👉:Int
+🤩🤩 = 0
+👈👈 = 0
+👉👉 = 0
+for 🙌🙌 in 0..<3 {
+    for 🙏🙏 in 0..<3{
+        print("Introduce un numero en la posicion [\(🙌🙌)][\(🙏🙏)]: ")
+        😗😗 = Int(readLine()!) ?? 0
+        🏢[🙌🙌][🙏🙏] = 😗😗
+        if 😗😗 > 🤩🤩{
+            🤩🤩 = 😗😗
+            👈👈 = 🙌🙌
+            👉👉 = 🙏🙏
         }
     }
 }
-print("La matriz es: ")
-for i in 0..<3 {   
-    for j in 0..<3{
-        print("\(Matriz[i][j])", terminator: " ")
+print("La Matriz es: ")
+for 🙌🙌 in 0..<3 {   
+    for 🙏🙏 in 0..<3{
+        print("\(🏢[🙌🙌][🙏🙏])", terminator: " ")
     }
     print("")
 }
-print("El numero mayor es: \(mayor) y se encuentra en la posicion:  [\(posicioni)][\(posicionj)] ")
+print("El numero Mayor es: \(🤩🤩) y se encuentra en la posicion:  [\(👈👈)][\(👉👉)] ")
