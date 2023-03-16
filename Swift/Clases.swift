@@ -1,7 +1,7 @@
 import Swift
-class Persona{
-    var nombre:String
-    var edad:Int
+public class Persona{
+    internal var nombre:String
+    internal var edad:Int
     init(nombre:String,edad:Int){
         self.nombre = nombre
         self.edad = edad
@@ -10,12 +10,12 @@ class Persona{
         print("Hola, mi nombre es \(self.nombre) y tengo \(self.edad) años")
     }
 }
-class auto{
-    var modelo:String
-    var marca:String
-    var color:String
-    var velocidad:Float
-    var peso: Float
+public class auto{
+    internal var modelo:String
+    internal var marca:String
+    internal var color:String
+    internal var velocidad:Float
+    internal var peso: Float
     init(modelo:String,marca:String,color:String,velocidad:Float,peso:Float){
         self.modelo = modelo
         self.marca = marca
@@ -27,13 +27,13 @@ class auto{
         print("El auto \(self.modelo) de la marca \(self.marca) se ha encendido")
     }
 }
-class refrigerador{
-    var marca:String
-    var modelo:String
-    var color:String
-    var temp:Float
-    var altura:Float
-    var capacidad:Float
+public class refrigerador{
+    internal  var marca:String
+    internal var modelo:String
+    internal var color:String
+    internal var temp:Float
+    internal var altura:Float
+    internal var capacidad:Float
     init(marca:String,modelo:String,color:String,temp:Float,altura:Float,capacidad:Float){
         self.marca = marca
         self.modelo = modelo
@@ -48,6 +48,7 @@ class refrigerador{
     }
 }
 let refri1 = refrigerador(marca:"LG",modelo:"2022",color:"Plateado",temp:0,altura:2.5,capacidad:1000)
+refri1.marca = "Samsung"
 refri1.enfriar()
 let auto1 = auto(modelo:"2019",marca:"Toyota",color:"Rojo",velocidad:200,peso:1000)
 auto1.encender()
