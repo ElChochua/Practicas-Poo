@@ -1,36 +1,48 @@
+import PracticasPoo.MetodosSwing;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 public class VentanaApp {
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        JButton sumarB = new JButton();
-        TextField getNum1 = new TextField();
-        TextField getNum2 = new TextField();
-        TextField getRes = new TextField();
-        //X A los lados y Y Arriba y abajo
-        getNum1.setBounds(30,30,100,30);
-        getNum2.setBounds(150,30,100,30);
+        //declaracion Objetos y variables
 
-        sumarB.addActionListener(new ActionListener() {
+        JFrame frame = new JFrame();
+        TextField hora = new TextField();
+        JLabel HorasIngresadas = new JLabel("Ingrese la hora (00:00)");
+        JLabel HorasConvertidas = new JLabel("Horas Convertidas");
+        JButton conversor = new JButton("Convertir");
+        TextField txtResultado = new TextField();
+
+
+        //Espacio para setear Propiedades de los componentes
+        HorasIngresadas.setBounds(20,43,200,40);
+        hora.setBounds(160,50, 100,25);
+        frame.setSize(400,400);
+        txtResultado.setBounds(160,100, 100,25);
+        conversor.setBounds(20,150,100,30);
+        HorasConvertidas.setBounds(20,95,140,40);
+
+        //Comportamiento de los botones
+        conversor.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-;               double num1 = Double.parseDouble(getNum1.getText());
-                double num2 = Double.parseDouble(getNum2.getText());
-                double res = num1 + num2;
-                getRes.setText(""+res);
+                MetodosSwing.Convertir(e, hora, txtResultado);
             }
         });
+        //Espacio para agregar al frame los componentes
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        sumarB.setText("Sumar");
-        sumarB.setBounds(50,100,95,30);
-        getRes.setBounds(50,200,100,100);
-        frame.add(sumarB);
-        frame.add(getNum1);
-        frame.add(getNum2);
-        frame.add(getRes);
-        frame.setSize(1980,1080);
+        frame.add(hora);
+
+        frame.add(HorasIngresadas);
+        frame.add(HorasConvertidas);
+        frame.add(conversor);
+        frame.add(txtResultado);
         frame.setLayout(null);
+        frame.setTitle("Horas");
         frame.setVisible(true);
+
     }
 }
