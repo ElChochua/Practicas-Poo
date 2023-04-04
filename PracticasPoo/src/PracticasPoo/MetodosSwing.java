@@ -32,22 +32,30 @@ public class MetodosSwing extends JFrame{
     public static void conversorBinario(ActionEvent e,int decimal,TextField txtResultado){
         int cociente, rec;
         int[] bin = new int[16];
+        StringBuilder resultado = new StringBuilder();
         int count = 0;
-        if(decimal > 65535){
-            JOptionPane.showMessageDialog(null,"El numero excede los 16 bits");
-        }else {
+        if (decimal > 65535) {
+            JOptionPane.showMessageDialog(null, "El número excede los 16 bits");
+        } else {
             do {
                 cociente = decimal / 2;
                 bin[count] = decimal % 2;
                 decimal = cociente;
                 count += 1;
             } while (cociente > 0);
-            String resultado = "";
             for (int i = count - 1; i >= 0; i--) {
-                resultado += bin[i];
+                resultado.append(bin[i]);
             }
-            txtResultado.setText(resultado);
+            txtResultado.setText(resultado.toString());
         }
         }
+    public static void segundosPorHora(ActionEvent e, TextField segundoss, TextField txtHoras, TextField txtMinutos){
+        int segundos = Integer.parseInt(segundoss.getText());
+        int horas, minutos;
+        horas = segundos/3600;
+        minutos = segundos / 60;
+        txtHoras.setText("" + horas);
+        txtMinutos.setText("" + minutos);
+    }
 }
 
