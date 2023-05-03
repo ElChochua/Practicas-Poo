@@ -2,6 +2,15 @@ package Herencia;
 
 public class MainHerencia {
     public static void main(String[] args) {
+        Cuadrado cuadrado =  new Cuadrado(23,"Cuadrado");
+        cuadrado.calcularArea();
+        cuadrado.calcularPerimetro();
+        cuadrado.dibujar();
+        Rectangulo rectangulo = new Rectangulo(4,2,"Rectangulo");
+        rectangulo.calcularArea();
+        rectangulo.calcularPerimetro();
+
+        /*
         AvionCargero avionC = new AvionCargero("Cargero", "B22", "Charger", 3, 200);
         AvionComercial avionComercial = new AvionComercial("Boeig 732", "Comercial", "B32C", 4, 100, 70);
         AvionCombate avionCombate = new AvionCombate("Caza", "Combate", "F-15", "Reconocimiento", 30000.0, 3, 660.0);
@@ -31,5 +40,6 @@ public class MainHerencia {
         avionC.despegar();
         avionC.aterrizar();
         avionC.carga();
+        */
     }
 }
