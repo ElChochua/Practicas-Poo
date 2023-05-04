@@ -2,13 +2,14 @@ package Herencia;
 
 public class MainHerencia {
     public static void main(String[] args) {
-        Cuadrado cuadrado =  new Cuadrado(23,"Cuadrado");
+        Cuadrado cuadrado =  new Cuadrado(20,"Cuadrado");
         cuadrado.calcularArea();
         cuadrado.calcularPerimetro();
         cuadrado.dibujar();
-        Rectangulo rectangulo = new Rectangulo(4,2,"Rectangulo");
+        Rectangulo rectangulo = new Rectangulo(20,10,"Rectangulo");
         rectangulo.calcularArea();
         rectangulo.calcularPerimetro();
+        rectangulo.dibujar();
 
         /*
         AvionCargero avionC = new AvionCargero("Cargero", "B22", "Charger", 3, 200);

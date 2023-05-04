@@ -15,16 +15,16 @@ public class Cuadrado extends Figura{
         System.out.println("El perimetro del cuadrado es: " + medidaLado * lado);
     }
     public void dibujar(){
-        int lado = 10;
+        int lado = this.lado;
         for (int i = 1; i <= lado; i++) {
             for (int j = 1; j <= lado; j++) {
                 if (i == 1 || i == lado || j == 1 || j == lado) {
-                    System.out.print("*"); // imprimir un asterisco en las posiciones de los bordes
+                    System.out.print("*");
                 } else {
-                    System.out.print(" "); // imprimir un espacio en las posiciones interiores
+                    System.out.print(" ");
                 }
             }
-            System.out.println(); // saltar a la siguiente línea
+            System.out.println();
         }
     }
 }
